@@ -19,7 +19,7 @@ public class ReadWriter{
     }
 //Funcion que escribe, recibe una ruta y un nombre de archivo en string
     public void escribe(String texto, String nombreArchivo){//recibimos el texto a escribir y el nombre del archivo
-        try(FileWriter archivo = new FileWriter(ruta+"/"+nombreArchivo)) {
+        try(FileWriter archivo = new FileWriter(ruta+"\\"+nombreArchivo)) {
             PrintWriter escritor = new PrintWriter(archivo);
             escritor.println(texto);
         } catch (Exception e) {
@@ -33,7 +33,7 @@ public class ReadWriter{
     BufferedReader lector;
     public void lee(String nombreArchivo){
         try {
-            archivo = new FileReader(ruta+"/"+nombreArchivo);
+            archivo = new FileReader(ruta+"\\"+nombreArchivo);
             if (archivo.ready()) {
                 lector = new BufferedReader(archivo);
                 String Cadena;
@@ -52,7 +52,7 @@ public class ReadWriter{
     public void cuentaPalabras(String nombreArchivo){
         int contador = 0;
         try {
-            archivo = new FileReader(ruta+"/"+nombreArchivo);
+            archivo = new FileReader(ruta+"\\"+nombreArchivo);
             if (archivo.ready()) {
                 lector = new BufferedReader(archivo);
                 String Cadena;
