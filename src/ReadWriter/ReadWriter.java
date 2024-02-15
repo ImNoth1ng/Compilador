@@ -1,5 +1,6 @@
 package ReadWriter;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.PrintWriter;
@@ -68,5 +69,22 @@ public class ReadWriter{
         }
         System.out.println("El archivo tiene " + contador + " palabras");
 
+    }
+
+    public String LeerArchivo(String nombreArchivo){
+        File f = new File(System.getProperty("user.dir") + File.separator + nombreArchivo);
+
+        if (f.exists()){
+            try{
+                BufferedReader br = new BufferedReader(new FileReader(f));
+                String palabras;
+                while ((palabras = br.readLine()) != null){
+                    return palabras;
+                }
+            }catch (Exception e){
+                System.out.println("Error al leer el archivo");
+            }
+        }
+        return "a";
     }
 }

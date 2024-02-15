@@ -7,7 +7,7 @@ public class maquinaImparCeros {
 
 
     public void addPalabras(String Palabras){
-        String[] palabras_separadas = Palabras.split(",");
+        String[] palabras_separadas = Palabras.split("\n");
         for (String palabra : palabras_separadas) {
             this.palabras.add(palabra);
         }
