@@ -3,23 +3,25 @@ import maquinasParImpar.*;
 import MaquinaRecursiva.*;
 public class App {
     public static void main(String[] args) throws Exception {
-        //pruebaReadWriter();
+
         //pruebaMaquinaParUno();
         //pruebaMaquinaImparCeros();
         pruebaMaquinaRecursiva1();
     }
 
-    public static void pruebaReadWriter(){
-        String ruta = "E:\\DOCS\\Java Projects";
-        String nombreArchivo = "archivoimportante.fes";
-        
+    public static String pruebaReadWriter(String nombreArchivo){
+        ReadWriter testo = new ReadWriter();
+        String palabras;
 
-        ReadWriter testo = new ReadWriter(ruta);
+        palabras = testo.LeerArchivo(nombreArchivo);
 
-        testo.escribe("1001010, 10010,00m01", "archivoimportante.fes");
-        testo.lee(nombreArchivo);
-        
-        testo.cuentaPalabras(nombreArchivo);
+        return palabras;
+    }
+    
+    public static void pruebaMaquinaRecursiva1(){
+        MaquinaRecursiva1 Maquina1 = new MaquinaRecursiva1();
+        Maquina1.addPalabras(pruebaReadWriter("Wordlist.fes"));
+        Maquina1.probarLista();
     }
 
     public static void pruebaMaquinaParUno(){
@@ -37,12 +39,6 @@ public class App {
         String palabras = lector.LeerArchivo("palabras");
         impares.addPalabras(palabras);
         impares.probarLista();
-    }
-
-    public static void pruebaMaquinaRecursiva1(){
-        MaquinaRecursiva1 Maquina1 = new MaquinaRecursiva1();
-        Maquina1.addPalabras("m001,0000,010101001");
-        Maquina1.probarLista();
     }
 }
 

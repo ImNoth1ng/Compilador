@@ -15,9 +15,7 @@ public class ReadWriter{
 
 //Constructor
 
-    public ReadWriter(String __ruta){
-        ruta = __ruta;
-    }
+
 //Funcion que escribe, recibe una ruta y un nombre de archivo en string
     public void escribe(String texto, String nombreArchivo){//recibimos el texto a escribir y el nombre del archivo
         try(FileWriter archivo = new FileWriter(ruta+"\\"+nombreArchivo)) {
@@ -85,7 +83,9 @@ public class ReadWriter{
             }catch (Exception e){
                 System.out.println("Error al leer el archivo");
             }
+        } else {
+            System.out.println("El archivo no existe");
         }
-        return "a";
+        return null;
     }
 }
