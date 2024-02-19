@@ -16,8 +16,9 @@ public class App {
 
         ReadWriter testo = new ReadWriter(ruta);
 
-        testo.escribe("Hola tonotos, como estan\nEspero que bien", "archivoimportante.fes");
+        testo.escribe("1001010, 10010,00m01", "archivoimportante.fes");
         testo.lee(nombreArchivo);
+        
         testo.cuentaPalabras(nombreArchivo);
     }
 
@@ -32,7 +33,9 @@ public class App {
 
     public static void pruebaMaquinaImparCeros(){
         maquinaImparCeros impares = new maquinaImparCeros();
-        impares.addPalabras("m001,0000,010101001");
+        Lector lector = new Lector();
+        String palabras = lector.LeerArchivo("palabras");
+        impares.addPalabras(palabras);
         impares.probarLista();
     }
 
