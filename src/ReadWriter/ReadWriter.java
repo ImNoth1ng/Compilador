@@ -76,10 +76,11 @@ public class ReadWriter{
 
         if (f.exists()){
             try{
-                BufferedReader br = new BufferedReader(new FileReader(f));
-                String palabras;
-                while ((palabras = br.readLine()) != null){
-                    return palabras;
+                try (BufferedReader br = new BufferedReader(new FileReader(f))) {
+                    String palabras;
+                    while ((palabras = br.readLine()) != null){
+                        return palabras;
+                    }
                 }
             }catch (Exception e){
                 System.out.println("Error al leer el archivo");
