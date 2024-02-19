@@ -1,10 +1,12 @@
 import ReadWriter.*;
 import maquinasParImpar.*;
+import MaquinaRecursiva.*;
 public class App {
     public static void main(String[] args) throws Exception {
         //pruebaReadWriter();
-        pruebaMaquinaParUno();
-        pruebaMaquinaImparCeros();
+        //pruebaMaquinaParUno();
+        //pruebaMaquinaImparCeros();
+        pruebaMaquinaRecursiva1();
     }
 
     public static void pruebaReadWriter(){
@@ -34,5 +36,10 @@ public class App {
         impares.probarLista();
     }
 
+    public static void pruebaMaquinaRecursiva1(){
+        MaquinaRecursiva1 Maquina1 = new MaquinaRecursiva1();
+        Maquina1.addPalabras("m001,0000,010101001");
+        Maquina1.probarLista();
+    }
 }
 
