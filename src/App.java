@@ -6,7 +6,9 @@ public class App {
 
         //pruebaMaquinaParUno();
         //pruebaMaquinaImparCeros();
-        pruebaMaquinaRecursiva1();
+        //pruebaMaquinaRecursiva1();
+        //pruebaMaquinaRecursiva1B();
+        pruebaMaquinaRecursiva2();
     }
 
     public static String pruebaReadWriter(String nombreArchivo){
@@ -22,6 +24,17 @@ public class App {
         MaquinaRecursiva1 Maquina1 = new MaquinaRecursiva1();
         Maquina1.addPalabras(pruebaReadWriter("Wordlist.fes"));
         Maquina1.probarLista();
+    }
+    public static void pruebaMaquinaRecursiva1B(){
+        MaquinaRecursiva1B Maquina1 = new MaquinaRecursiva1B();
+        Maquina1.addPalabras(pruebaReadWriter("Wordlist.fes"));
+        Maquina1.probarLista();
+    }
+
+    public static void pruebaMaquinaRecursiva2(){
+        MaquinaRecursiva2 Maquina2 = new MaquinaRecursiva2();
+        Maquina2.addPalabras(pruebaReadWriter("Wordlist.fes"));
+        Maquina2.probarLista();
     }
 
     public static void pruebaMaquinaParUno(){
@@ -42,3 +55,4 @@ public class App {
     }
 }
 
+ 
