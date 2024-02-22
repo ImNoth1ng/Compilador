@@ -1,7 +1,7 @@
 package MaquinaConfigurable;
 import Herramienta.*;
 
-public class Lexico {
+public class LexicoSE {
     private int indice = 0;
     private int error = -1;
     //private int aceptar = 1;
@@ -10,11 +10,12 @@ public class Lexico {
     private int estado = 1;
     private int entrada = 0;
 
-    private int[][] matrix ={{2,1-1},{1,1,-1},{2,2,1}};
+    //private int[][] matrix ={{2,1-1},{1,1,-1},{2,2,1}};
+    private int[][] matrix = {{2,1,1,-1},{1,1,1,-1},{2,2,3,1},{1,1,1,1}};
 
     private String token;
 
-    public Lexico(){
+    public LexicoSE(){
     };
 
     public void setToken(String token){
