@@ -6,7 +6,7 @@ public class App {
     public static void main(String[] args) throws Exception {
 
         LexicoSE app = new LexicoSE();
-        app.setToken("olatonotos1 asd");
+        app.setToken("olatonotos ");
         try{
             int verifica= app.inicio();
             if(verifica == 1){
