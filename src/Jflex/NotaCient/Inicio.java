@@ -1,6 +1,7 @@
 package Jflex.NotaCient;
 
 import Jflex.NotaCient.Tokens;
+import Jflex.NotaCient.*;
 
 import java.io.*;
 

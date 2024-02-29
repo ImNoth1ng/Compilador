@@ -1,4 +1,4 @@
-package Jflex.NotaCient.NotaCient;
+package Jflex.NotaCient;
 import static Jflex.NotaCient.Tokens.*;
 
 %%
@@ -7,7 +7,7 @@ import static Jflex.NotaCient.Tokens.*;
 
 DIGITO=[0-9]
 SIGNO=[+-]
-EXPONENTE=[eE^]
+EXPONENTE=[eE]
 FLOAT_POINT=[.]
 WHITE=[ \t\r\n]
 FINCADENA=";"
